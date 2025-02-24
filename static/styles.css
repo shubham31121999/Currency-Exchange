@@ -1,0 +1,156 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: #fff;
+    line-height: 1.8;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Flex Container for Inputs on the Same Line */
+.form-inline {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensure wrap on smaller screens */
+}
+
+/* Input and Select Styling */
+input, select {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #fff;
+    color: #333;
+    box-sizing: border-box; /* Prevent overflow */
+}
+
+/* Ensure Dropdowns Stretch */
+select {
+    flex: 1; /* Flex-grow for currency dropdowns */
+    min-width: 120px; /* Avoid shrinking too small */
+}
+
+/* Fix Amount Input Width */
+input[type="number"] {
+    width: 150px; /* Fixed width for amount */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Submit Button */
+button {
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #43cea2, #185a9d);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #36d1dc, #5b86e5);
+}
+
+/* Currency Lists */
+.currency-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.currency-box {
+    flex: 1;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.currency-box h2 {
+    font-size: 22px;
+    text-align: center;
+}
+
+.currency-box ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.currency-box li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.currency-box li:last-child {
+    border-bottom: none;
+}
+
+/* Link Styling */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #36d1dc;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #5b86e5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .currency-section {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .form-inline {
+        flex-direction: column; /* Stack on small screens */
+        gap: 15px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+    }
+
+    input[type="number"] {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
